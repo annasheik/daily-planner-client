@@ -2,4 +2,11 @@ language: node_js
 node_js: node
 cache:
   directories:
-    - node_modules
+  - node_modules
+deploy:
+  provider: heroku
+  api_key:
+    secure: AQMA80D3DTRtEyhASJ+hOXsUwYXIhc9yMIVxYQtSCG8bZ3VBSrXREsG5qJkD5CbGoFJWbmOZ6HGxa1PzYWgL7h6dgUmMvP1nX4pXCqY5H4jcbHFQtjYzy/BnPFQdhPivLa1nHv3y7Dh/CwBXgoUOup7V9ONFpgpt4EZQSrCenJUzPeMIkjn3T90McCIciWY+eCSUcmDf0qvTApfpc3soPWXWAk4eVqWeUz1DwvL+riiI8aBHdcU7QV4fYGzZFLMwNX6vhHA6nnPEh0PsXeyVfw3UyW2p1SS2S6CtmlPm4Y9ZR0Z4t2/02y4GSzH/uIf3ZK54Lg5KNC2RkKKOqX+dPfCcbPqH7Y52ZrEnPhNwRWaosJjtv2/ebKEyRx/0jZYmZlMTuzL4zqG4D5ievk0TfMPCTrsNIF0no7mD7p7615ntksq/T35fdv6IgzVQT4NrYT9tU2hbFOw09V4zh/lwTkHimrKnhXKs7lDm3Rf1EixGZIKje1VoLejjEeoAZ7tTwwxhCG+PNXbe6aNQezIJnKrKJWrWemlAy2BIw305LP6s1HJP71sSHF7aHRksNgkgjUqG4acrm7FTeVRS6XH0jSUlb71hCmTFID4AdU8Nw4GVzaCDav5qOEuNkqMS9LBrq+FHAMcgRWw098fmS16ZQKzwR2/RdikSN7iK7JLxHNU=
+  app: agile-meadow-10177
+  on:
+    repo: annasheik/daily-planner-client
