@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Daily Planner</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+		<link rel="stylesheet" type="text/css" href="main.css">
+	</head>
+
+	<body>
+		<nav role="navigation">
+			 <div id="menuToggle">
+    <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+    <input type="checkbox" />
+    
+    <!--
+    Some spans to act as a hamburger.
+    
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+    <ul id="menu">
+      <a href="#"><li>Home</li></a>
+      <a href="#"><li>Next 7 days</li></a>
+      <a href="#"><li>Monthly goals</li></a>
+      <a href="#"><li>Yearly goals</li></a>
+      <a href="#"><li>Productivity tips</li></a>
+      
+    </ul>
+  </div>
+			<h2>Daily Planner</h2>
+			<ul class="nav-links">
+				<li><a href="">Sign In</a></li>
+				<li><a href="">Join</a></li>
+			</ul>
+		</nav>
+		<main role="main">
+			<section class="quote">
+				<p>“Productivity is never an accident. It is always the result of a commitment to excellence, intelligent planning, and focused effort.” —Paul J. Meyer
+			</p>
+			</section>
+			<section class="entries">
+				<div class="entry 1">
+					<h4>Today <span class="date">Monday, September 8</span></h4>
+					<div class="new-task">
+						<button class="add-task" type="submit">+ New</button>
+					</div>
+					<ul class="checkbox">
+						<li>
+    							<input type="checkbox" id="checkbox" />
+   								 <label for="checkbox">Finish React Project</label>
+  								<i class="fas fa-times"></i>
+  					   </li>
+						<li>
+    							<input type="checkbox" id="checkbox" />
+  								<label for="checkbox">Doctor Appointment at 2:30</label>
+  								<i class="fas fa-times"></i>
+  							</li>
+    					<li>
+    							<input type="checkbox" id="checkbox" />
+   								 <label for="checkbox">Pay electricity bill</label>
+  								<i class="fas fa-times"></i>
+						</li>
+
+					</ul>
+				</div>
+			</section>
+			<section class="add-task-section">
+				<form class="add-task" role="form">
+					<legend>Add new task</legend>
+					<label for="task" required></label>
+					<input type="text" name="task" id="task">
+					<button>Add</button>
+					<button>Cancel</button>
+				</form>
+			</section>
+		</main>
+		<footer role="content-info">Made by <a href="https://www.linkedin.com/in/anna-kremer/">Anna Kremer</a></footer>
+	</body>
+</html>

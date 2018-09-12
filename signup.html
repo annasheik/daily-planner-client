@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Daily Planner</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="main.css">
+	</head>
+
+	<body>
+		<nav role="navigation">
+			<h2>Daily Planner</h2>
+			<ul class="nav-links">
+				<li><a href="">Sign In</a></li>
+				<li><a href="">Join</a></li>
+			</ul>
+		</nav>
+		<main role="main">
+	    	<section class="login-screen" aria-live="assertive">
+				<form role="form" class="signup">
+					<fieldset name="signup-info">
+						<div class="login-header">
+							<legend align="center">Sign Up</legend>
+				   		 </div>
+				    	<p id='notification'></p>
+
+						<label for="email" required>Email</label>
+						<input type="email" name="email" id="email" placeholder="Email address" required="">
+						<label for="password" required>Password</label>
+						<input type="password" name="password" id="password" placeholder="Password" required>
+						<label for="password-confirm" required>Confirm password</label>
+						<input type="password" name="password" id="password-confirm" placeholder="Confirm password" required >
+				</fieldset>
+					</fieldset>
+					<button type="submit" class="js-login-button">Login</button>
+					<p>Already have an account? <a href="" class ="nav-signup">Sign up</a></p>
+				</form>
+				<div class="demo-account"> 
+					<p>Demo account:</p>
+					<ul>
+             			<li>Username: demo@gmail.com</li>
+             			<li>Password: password</li>
+           	   		</ul>
+           	   </div>
+			</section> 
+		</main>
+
+		<footer role="content-info">Made by <a href="https://www.linkedin.com/in/anna-kremer/">Anna Kremer</a></footer>
+
+	</body>
+</html>
