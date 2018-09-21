@@ -1,0 +1,24 @@
+import React from 'react';
+
+export default function OnBoarding() {
+	return( <div>
+	        <section className="onboarding">
+				<img className="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOGSURBVGhD7ZhZ6A1RHMfHvkTIUtbIkr0sSRKRJOQFLwpZXjyRUvIgypqUPCiyPuBBlgcSniRFFOHJrmxFsoRQ+H7O+Z86bnNnuf+Z/50yn/p0f2fumfnd3713zjlzgpKS+tJMbpB35TnZX8YxVF6Qd+RqDsRQS47ULJZ/JEm+ypsyjkfys7wvOXe2jKKWHKk5JL/JVnKHJGF7WY1ekj7rZYeGeLeMIm2OmjguP9rQfDiSdDKtcPpJ+qwyLRvvs2FV0uaIhW9kpBzneVFWJpkq/T6+c2RlIadkWF9nkhzdZCLGyteSi1RamSSJfiFJjMvxW26XsVyW7+UKudDzmqxMslT6fXwpgD5+IZdkWF9nkhxnJceHyUieS4bMSopyj0yRHOevG8kLed6G/3BMfpGM9RslF+soq9FX0of5o2VDvFdGkSTHZNmoQvhAXOCEfCWfyChayHfymTwtOXeJjCJJjkYX0kaelL/kUzlJxjFTvpQ/5UFJcVEkydHoQhwMzWlJe05U/1SF3JL+TTZDtrWh+VZnNbwCx3nfwXmM/Q7Gff+b7SPH2NAwUA63oWGEHGBDwwTZ04aGlTJxIXRcY1pBMETSXmBaQTBd0uYVOE6bfsB5jPVu4tolv9vQcFiyBnMwJPtrqtvyjA0Nb+QBGwbtJH/TVIUw/MEoSXuRadkL+BfiOG36gRs2GX6BIZe2gyGWHA7mjns2NBD7f22GY84Bfm2u5eevCkneSmZ4YNHGhQabVhD0kLR5BY7Tdos7zuNbb25aQTBN7rGhYb7cbEMDE6+/xF8n/dFtm5xrQwODQeJCom72epPZqFVvykKKRm6F9JZrpbu58yaXQlgYPpY8X3flQBOQSSHM5g/lVkkRLOoowp/ZYZMkmZPNBGDt9UP674XJWstNwJVk9osclVzokwwrAiZKNg+cyyWwIbFF+u+FydxRbSsos0L4VZgAeW4IKyJvMr9HMt+mSUguNzuw5B5vwyYhl0JaS/pyYbf2yptMCuFZer9k69Mvgv1aH3Y7rqSUaw2ScWRSCJMeG9IMoTdkWBGwTPJckcbrkk3vODL7a3WXD2S1IvIm03uks2R/qR7kcrPXg7KQovF/F8Iq90NBZAupi6ypEDozARbBnZLN8PIeKRqJC7kq2dKfJ3neKJps/lGIv38cChvQPP3RuagekYlgI4GtzrBvpN6OliUlJakJgr8m2NwscoN/CwAAAABJRU5ErkJggg=="/>
+				<h4>Organize your day</h4>
+				<p>Online Daily Planner lets you stay organized by keeping
+				all your daily tasks and goals in 1 place. Access it anywhere, anytime.</p>
+			</section>
+
+			<section className="onboarding">
+				<img className="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJqSURBVGhD7ZnLq05RGIc3csk1IiWkDCgycQtFueYyMXAtKeG4DU2IJOfIbUIZK+ZShJKklIhiIJko89PhD3B7fu/byjfYe/v2d769raP11FPvu+ur9dvra6+1184SiURiSDMaz+AjfBKpGpvGOAoLuYa/8BO+iVSNTWO8goV8xBdeRo3GqLEW8gUfeBk1GqPGWkgK0jApSGykIHksxeleNk7XguzD73jBuubpOMhOvI1jMYR4jZMwMA2fYViBX+ISFPpt6+pc5itcg2V0HGQX/sQPmBdCTMa7GPZED3ERiuvYul8q8zEuxzI6DiKOo8LkhWiaQQURusP6e/1rBh0kFlKQdhiDZ/FSlzyGRdQaZDZ+Q730dMPPOBzzqDVIk6QgsZGCtMMwXIc7SlyJYgRuwnB9C47Edqk1yDzMe/q0qn2aHtPLWq4FN2C71BpELMb1JS5AodlTmHB9BRY9avOoPUhTpCCxkYLERuUg23Gul8YenOGlcQCneGnH/IcxvHhNwIOoNUNMxf1eGrNQr9CB+bjNS0NPwLVeGqsxvAJXDjKAN7zMxqNedc9b92fdOGSdP0LVb7bODyzU6zErelB9uBE6gfmB46zLslvY76VxD995abzFp15WD6Jt+U0vs4mogfRZ52uC+iPWZdkqVK9VWuxG9WE1P4rqNRPiIqrXzIk7+NVL4z6+99JQqOdeVg9yAsORjjiFmgmhBUyzM9M6v7O9qNMUoeMhhQ5flubgOdRiKBbiSS8N/W3CTREbca+XhrYyW738e5D/5kPPVdR0D4VPb5exEO1AT2PsH0M1xiq75UQikYiKLPsN6HFvweCQ7tcAAAAASUVORK5CYII="/>				<h4>Set the goals</h4>
+				<p>Set the goals for a month and year and stay on track.
+				</p>
+			</section>
+			<section className="onboarding">
+				<img className="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGaSURBVGhD7di7SsRAGIbh9QCiFmIh2NlYWHoCLbwCwVZr0cJeWxE8NFYeQBBLEfEKVNBar8DaAxbiFaiFvp8QCMMkM0UiE/xfeIoVZpnfTbLLtCzLsqyUa8M6HnCKPjQuDXGC75xdNCrfEHKO5OvAMo5wDXeID0zD1xC2cVwT7WkJ2mOwHbibz2iIOfjqxSt866qmf1awe/gWlw2hJuFbV4c7BNO07sLQEKoHL3DX1iHqE9H1twhdj9m1OYuYdI9sIX9dV0l70t7aYVlWTQ1gHiO/rxraKN6gR98XYp9iSaUh3pF/jl+gMfVjCu4QsoGiuqC1dYluAs9wN5+5QTd86RtXl55vXVW0tzEE8/3izWgI/RTxNQzfmjpcIVjRIGVDqL8c5BLBxvGE/MLQEFmb+ER+bdUeEXVpZeVvsE79IbJkbnbLsqxmpkfdGvaxAB3WNa5BuGdUZwiV1AGdOkR+iMwMikrugE7dwvcGKygquQM6dQDfG5R9Iskd0CndI+6mYu+R5A7o9NRaxR506NDIp5ZlWZZl/aNarR8iILYkwelKOAAAAABJRU5ErkJggg=="/>				<h4>Get stuff done</h4>
+				<p>Organize your tasks, and mark already completed ones.
+				Check on the status of tasks daily to stay motivated.</p>
+			</section>
+			</div>
+			)
+}
