@@ -10,10 +10,11 @@ export default class AddNewTask extends React.Component {
 	onSubmit(event) {
 		event.preventDefault();
 		const task = this.textInput.value.trim();
+	    const index = this.props.index;
 		 if (task && this.props.onAdd) {
-            this.props.onAdd(this.textInput.value);
+            this.props.onAdd(this.textInput.value, index);
+            this.props.onCancel();
         }
-        console.log(task)
         this.textInput.value = '';
 	}
 
@@ -23,9 +24,9 @@ export default class AddNewTask extends React.Component {
 			<form className="add-task" role="form" onSubmit={this.onSubmit}>
 				<legend>Add new task</legend>
 				<label htmlFor="task" required></label>
-				<input type="text" name="task" id="task" ref={input => this.textInput = input}/>
+				<input type="text" name="task" id="task"  ref={input => this.textInput = input}/>
 				<button>Add</button>
-				<button>Cancel</button>
+				<button type="button" onClick={() => this.props.onCancel()}>Cancel</button>
 				</form>
 			</section>
 		)}

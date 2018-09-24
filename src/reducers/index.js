@@ -1,4 +1,4 @@
-import {ADD_TASK} from '../actions';
+import {ADD_TASK, DELETE_TASK} from '../actions';
 
 const initialState = {tasks: {},
 					 quotes : ["“Productivity is never an accident. It is always the result of a commitment to excellence, intelligent planning, and focused effort.” —Paul J. Meyer",
@@ -8,7 +8,6 @@ const initialState = {tasks: {},
 ]
 }
 
-const options = {month: 'long', day: 'numeric' };
 const date = new Date(new Date().setHours(0,0,0,0));
 const dates =[];
 
@@ -48,12 +47,35 @@ for (let i=0;i<=dates.length-1; i++) {
 	}
 
 export const Reducer = (state=initialState, action) => {
+    console.log(action.task)
 	if(action.type ===ADD_TASK) {
-		console.dir(state)
-		return Object.assign({}, state, {
-			
-		});
+	  // const newTasks = state.tasks[dates[action.index].getTime()].concat(action.task);
+	   const a = state.tasks[dates[action.index].getTime()];
+	   a.push(action.task); 
+	   console.log(a) 
+	   console.log(state)
+       
+	   const newState = Object.assign({}, state, {
+	   	tasks: {...state.tasks}
+	   	})
+	   console.log(newState)
+	   return newState;
+	   
+	   
 	}
+	else if(action.type===DELETE_TASK) {
+		console.log(action.index)
+		console.log(action.key)
+		const tasks = state.tasks[dates[action.index].getTime()].splice(action.key, 1)
+		const b = Object.assign({}, state, {
+			tasks: {...state.tasks}
+		});
+		console.log(b)
+		return b;
+		
+	}
+
+	console.log(state)
 	return state;
 }
 

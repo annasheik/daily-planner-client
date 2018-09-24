@@ -13,7 +13,7 @@ body {
 nav,
 footer {
   padding: 1% 0;
-  background-color: #aaa;
+  background-color: #fff;
 }
 
 nav {
@@ -56,18 +56,39 @@ main {
 }
 
 /*HEADER */
-
 header {
   padding: 12% 0;
   margin-top: 82px;
 }
+.hero {
+  background: url(./pictures/hero.jpg) no-repeat center top;
+  background-size: 100vh;
+  text-align: center;
+  background-attachment: fixed;
+  margin-left: auto;
+  margin-right: auto;
+}
+.banner-text {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 88%;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; // IE8
 
+  /* This works in IE 8 & 9 too */
+  /* ... but also 5, 6, 7 */
+  filter: alpha(opacity=50); // IE 5-7
+  
+  /* Modern Browsers */
+  opacity: 0.5;
+}
 /* SECTIONS*/
 
 section.onboarding {
   min-height: 200px;
   padding: 6% 0;
-  background-color: #bbb;
+  background-color: #fff;
 }
 
 
@@ -78,7 +99,7 @@ section.onboarding p {
 }
 
 section.onboarding:nth-child(even) {
-  background-color: #ddd;
+  background-color: #fff;
 }
 
 
@@ -132,9 +153,9 @@ label {
 
 .js-login-button, .js-signup-button {
 	width: 106px;
-    padding: 3px;
-    background-color: #f2f2f2;
-      transition: background-color 0.5s ease;
+  padding: 3px;
+  background-color: #f2f2f2;
+  transition: background-color 0.5s ease;
 
 }
 .js-login-button:hover, .js-signup-button:hover {
@@ -147,12 +168,22 @@ label {
   margin: 0 10px 0 10px;
 }
 .demo-account {
-    width: 300px;
-    margin: 40px 0 40px 0;
-    display: inline-block;
+  margin: -15px 0 4px 0;
+  display: inline-block;
+  font-size: 17px;
 }
 .demo-account ul {
     text-align: left;
+}
+.demo-account ul li {
+  display: block;
+}
+.login-here {
+  font-size: 17px;
+}
+.login-here a:hover{
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 /* DASHBOARD */
@@ -161,11 +192,14 @@ div.dashboard {
 }
 .quote {
   font-style: italic;
+  margin-left: 8px;
 }
 
 div.entries {
   text-align: left;
-
+}
+ul.new-task {
+  margin-left: -30px;
 }
 .checkbox label {
   display: inline-block;
@@ -343,13 +377,13 @@ ul#menu {
   display: block;
 }
 section.add-task-section {
-  height: 25px;
   border: 1px solid #d6dad8;
   background-color: white;
-  margin-left: -24px;
+  margin-left: 6px;
   padding: 12px;
   margin-right: 24px;
-  height: 133px;
+  height: 121px;
+  font-size: 17px;
   }
 
 input#task {
@@ -376,9 +410,29 @@ div.productivity-page {
   text-align: left;
   margin-left: 31px;
   margin-right: 10px;
+  font-size: 19px;
+  margin-top: 86px;
 }
-.productivity-page h1 {
+.productivity-page h2 {
   font-size: 23px;
   font-style: italic;
   margin: 0.67em 0;
+}
+.author {
+  font-size: 17px;
+  font-style: italic;
+}
+
+/*FOOTER*/
+footer {
+  background-color: #dadada;
+}
+footer p {
+  font-size: 16px;
+}
+footer a{
+  margin-left: 2px;
+}
+footer a:hover {
+  text-decoration: underline;
 }

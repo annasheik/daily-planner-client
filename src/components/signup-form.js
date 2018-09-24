@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 export default function SignUpForm() {
 	return (
@@ -17,7 +18,7 @@ export default function SignUpForm() {
 						<input type="password" name="password" id="password-confirm" placeholder="Confirm password" required />
 				</fieldset>
 					<button type="submit" className="js-login-button">Login</button>
-					<p>Already have an account? <a href="" className="nav-signup">Sign up</a></p>
+					<p className="login-here">Already have an account? <Link to="/login">Log in</Link></p>
 				</form>
 		)
 }

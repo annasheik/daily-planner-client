@@ -11,10 +11,8 @@ export class Day extends React.Component {
             isHidden: true
         }
     }
-    
-    addTask(task) {
-
-    	this.props.dispatch(addTask(task));
+    addTask(task, index) {
+    	this.props.dispatch(addTask(task, index));
     }
 
    addTaskHandler = () => {
@@ -27,14 +25,16 @@ export class Day extends React.Component {
 				<button className="add-task" type="button" onClick={() => this.addTaskHandler()}>+ New</button>
 			</div>
 			<div id="new-task">
-			{this.state.isHidden ? null : (<AddNewTask onAdd={(task, date) => this.addTask(task,  this.props.date)} />)}
+			{this.state.isHidden ? null : (<AddNewTask onCancel={() => this.addTaskHandler()} onAdd={(task, index) => this.addTask(task, this.props.index)} />)}
+			{console.log(this.props.index)}
 			{console.log(this.state.isHidden)}
 
 			</div>
-			<Checkbox 
-			tasks={this.props.tasks}
+			{this.props.tasks.length > 0 ? 
+			<Checkbox index={this.props.index}
+			tasks={this.props.tasks} /> : <p>No tasks yet</p> }
+		    
 			
-			/>
 		</div>
 		)
 		}

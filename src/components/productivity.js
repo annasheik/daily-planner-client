@@ -4,7 +4,7 @@ export default function ProductivityPage() {
 	return(
 	<div className="productivity-page">
 
-				<h1>21 Tips to become the most productive person </h1>
+				<h2>21 Tips to become the most productive person </h2>
 			
 			
 				<p className="productivity">
@@ -56,7 +56,7 @@ I truly hope these 21 productivity tips have been valuable to you. And that I’
 <br></br><br></br>
 Stay productive.
 				</p>
-				<p>by Robin Sharma</p>
+				<p className="author">by Robin Sharma</p>
 			
 			
 	</div>

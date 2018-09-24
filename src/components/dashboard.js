@@ -12,7 +12,6 @@ export default function Dashboard(props) {
 			quote={randomQuote}
 			/>
 			<Planner tasks={props.tasks}
-
 			/>
 		</div>
 		)

@@ -24,7 +24,8 @@ export class Main extends React.Component {
 
 const mapStateToProps = state => ({
     quotes: state.quotes,
-    tasks: state.tasks
+    tasks: state.tasks,
+   
 });
 
 export default connect(mapStateToProps)(Main);

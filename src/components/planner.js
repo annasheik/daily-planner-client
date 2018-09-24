@@ -17,23 +17,25 @@ function format(timestamp) {
 
 }
 
-
-
 export default function Planner(props) {
 
 		
 const dates = Object.keys(props.tasks)
 let days=[];
         for (let i = 0; i < 7; i++) {
-            console.log(typeof dates[i])
+            
         days.push(
-        <li>
+        <li key={i}>
             <h4 className="date">{format(dates[i])}</h4>
-            <Day tasks={props.tasks[dates[i]]}/>
+            <Day index={i} tasks={props.tasks[dates[i]]}/>
         </li>
         );
         }
-        
+    
+
+
+
+
 		return (
         <div className="entries">
              <ul className="new-task">
@@ -45,7 +47,6 @@ let days=[];
 
 
 
-//const date = new Date();
 //const todayDate = (new Date()).toLocaleDateString("en-US", options);
 //const dates =[];
 
