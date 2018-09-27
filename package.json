@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "jwt-decode": "^2.2.0",
     "normalize.css": "^8.0.0",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
@@ -11,6 +12,8 @@
     "react-router-dom": "^4.4.0-alpha.1",
     "react-scripts": "1.1.5",
     "redux": "^4.0.0",
+    "redux-form": "^7.4.2",
+    "redux-thunk": "^2.3.0",
     "uuid": "^3.3.2"
   },
   "scripts": {
