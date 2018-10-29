@@ -30,7 +30,8 @@ export class Day extends React.Component {
 			{console.log(this.state.isHidden)}
 
 			</div>
-			{this.props.tasks.length > 0 ? 
+			
+				{Object.keys(this.props.tasks || {}).length > 0 ?
 			<Checkbox index={this.props.index}
 			tasks={this.props.tasks} /> : <p>No tasks yet</p> }
 		    
@@ -42,3 +43,4 @@ export class Day extends React.Component {
 }
 
 export default connect()(Day);
+//{this.props.tasks.length > 0 ? 

@@ -5,27 +5,38 @@ import Login from './login';
 import SignUp from './sign-up';
 import ProductivityPage from './productivity'
 import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 import {connect} from 'react-redux';
+//import {Route, withRouter} from 'react-router-dom';
+
 
 export class Main extends React.Component {
+
 	render() {
-	return (<Switch>
+  
+     
+	return (//<Switch>
 		<div>
 		<Route exact path="/" component={LandingPage} />
-		<Route exact path="/dashboard" component={() => <Dashboard quotes={this.props.quotes} tasks={this.props.tasks}/>} />
+		<Route exact path="/dashboard" component={Dashboard}  />
 		<Route exact path="/login" component={Login} />
 		<Route exact path="/signup" component={SignUp} />
 		<Route exact path="/productivity-tips" component={ProductivityPage} />
 		</div>
-		</Switch>
+		//</Switch>
 		)
 }
 }
 
-const mapStateToProps = state => ({
-    quotes: state.quotes,
-    tasks: state.tasks,
-   
-});
+const mapStateToProps = state => {
+	console.log(state)
+     return {
+     quotes: state.index.quotes,
+     tasks: state.index.tasks,
+     loggedIn: state.auth.currentUser !== null
+   }
+};
 
 export default connect(mapStateToProps)(Main);
+
+// <Dashboard quotes={this.props.quotes} tasks={this.props.tasks

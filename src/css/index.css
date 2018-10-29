@@ -33,12 +33,13 @@ nav {
     margin-top: -7px;
 }
 ul.nav-links {
-	display: inline-block;
+  display: inline-block;
   float: right;
   margin-right: 8px;
-  margin-top: -43px;
-  font-size: 18px;
+  margin-top: -6px;
+  font-size: 21px;
 }
+
 li {
 	display: inline;
 }
