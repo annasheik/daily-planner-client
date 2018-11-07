@@ -11,7 +11,7 @@ function isToday(date) {
 } 
 
 function format(timestamp) {
-    console.log(timestamp)
+ 
     const options = {month: 'long', day: 'numeric' };
     const date = new Date(new Date(parseInt(timestamp)).setHours(0,0,0,0));
     const dateString = date.toLocaleDateString("en-US", options);
@@ -24,10 +24,12 @@ function fakeTasks() {
 
     for (let i=0; i<7; i++) {
     const newDate = new Date(new Date().setHours(0,0,0,0));
+    
     newDate.setDate(date.getDate()+i);
+
     tasks[newDate.getTime()] = [];
     }
-    console.log(tasks)
+    
     return tasks;
 }
 
@@ -35,7 +37,7 @@ function mergeTasks(tasks) {
     const merged = fakeTasks();
     const dates = Object.keys(tasks)
     dates.forEach(date => {
-        const timestamp = new Date(parseInt(date)).setHours(0,0,0,0).getTime();
+        const timestamp = new Date(parseInt(date)).setHours(0,0,0,0)
         merged[timestamp] = tasks[date]; 
     })
 
@@ -46,7 +48,7 @@ function mergeTasks(tasks) {
     //    merged[timestamp] = dates[i];
    // })
 
-
+    
     return merged;
 }
 
@@ -56,16 +58,18 @@ export class Planner extends React.Component{
     render() {    
         const mergedTasks = mergeTasks(this.props.tasks);
         const dates = Object.keys(mergedTasks)
-        console.log(dates)
+       
         let days=[];
         for (let i = 0; i < 7; i++) {
+         
         days.push(
         <li key={i}>
             <h4 className="date">{format(dates[i])}</h4>
-            <Day index={i} tasks={this.props.tasks[dates[i]]}/>
+            <Day date={dates[i]} index={i} tasks={mergedTasks[dates[i]]}/>
         </li>
         );
         }
+        
 		return (
         <div className="entries">
              <ul className="new-task">

@@ -49,29 +49,48 @@ const initialState = {tasks: {},
 // 	}
 
 export default function reducer(state=initialState, action)  {
-    console.log(action.type)
+    
 	if(action.type ===ADD_TASK_SUCCESS) {
-		console.log('Im here')
+		console.log('adding task')
 	  // const newTasks = state.tasks[dates[action.index].getTime()].concat(action.task);
 	  // const a = state.tasks[dates[action.index].getTime()];
 	  // a.push(action.task); 
        
+       const newDates = Object.keys(action.task);
+       const newTasks = Object.assign({}, state.tasks)
+       newDates.forEach(date => {
+       	if(newTasks[date]) {newTasks[date] = newTasks[date].concat(action.task[date])}
+       	else {newTasks[date] = action.task[date]}	
+       })
+      
 	   const newState = Object.assign({}, state, {
-	   	tasks: {...state.tasks, ...action.task},
+	   	tasks: newTasks,
 	   	error: null
 	   	});
+	  
 	   return newState;
 	      
 	} else if(action.type===DELETE_TASK_SUCCESS) {
 		//state.tasks[dates[action.index].getTime()].splice(action.key, 1)
+		console.log('deleting task')
+		//const id = action.id;
+		const date = action.date;
+		console.log(state.tasks[date])
+		const newNew = Object.assign({}, state.tasks);
+		const filteredTasks = newNew[date].filter(task => {
+			return task.id !== action.id});
+		//const newA = state.tasks[date].filter(task => task.id !== action.id);
+		console.log(filteredTasks)
+		newNew[date] = filteredTasks;
 		const b = Object.assign({}, state, {
-			tasks: {...state.tasks},
+			tasks: newNew,
 			error: null
 		});
+		console.log(b)
 		return b;
 		
 	} else if (action.type===FETCH_TASKS_SUCCESS) {
-		console.log('Im here')
+		
 		const a = Object.assign({}, state, {
 		tasks: {...state.tasks, ...action.tasks},
 		error: null

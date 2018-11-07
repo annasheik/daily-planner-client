@@ -11,8 +11,11 @@ export default class AddNewTask extends React.Component {
 		event.preventDefault();
 		const task = this.textInput.value.trim();
 	    const index = this.props.index;
+	    const date = this.props.date;
+
+	  
 		 if (task && this.props.onAdd) {
-            this.props.onAdd(this.textInput.value, index);
+            this.props.onAdd(this.textInput.value, index, date);
             this.props.onCancel();
         }
         this.textInput.value = '';

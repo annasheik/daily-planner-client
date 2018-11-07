@@ -7,7 +7,7 @@ import {fetchTasks} from '../actions/index';
 
 export class Dashboard extends React.Component {
 
-	componentDMount() {
+	componentWillMount() {
 		console.log('Component will mount')
         this.props.dispatch(fetchTasks());
     }

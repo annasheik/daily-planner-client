@@ -33,50 +33,68 @@ export const fetchTasks = () => (dispatch, getState) => {
 }
 
 export const ADD_TASK_SUCCESS = 'ADD_TASK_SUCCESS';
-export const addTaskSuccess = (task, index) => ({
+export const addTaskSuccess = (task, index, date) => ({
 	type: ADD_TASK_SUCCESS,
 	task,
-	index
+	index, 
+    date
 })
 
-export const addTask = (dispatch, getState, task, index) => {
+export const addTask = (task, index, date) => (dispatch, getState) => {
+       const x = JSON.stringify({text: task, date: date});
 	   const authToken = getState().auth.authToken;
        return fetch(`${API_BASE_URL}/tasks`, {
         method: 'POST',
         headers: {
             // Provide our auth token as credentials
-            Authorization: `Bearer ${authToken}`
+            Authorization: `Bearer ${authToken}`,
+            "Content-Type": "application/json"
         },
-        data: {text: task.text} 
+        body: JSON.stringify({text: task, date: date}) 
     })
-        .then(res => normalizeResponseErrors(res))
-        .then(res => res.json())
-        .then(({data}) => dispatch(addTaskSuccess(data, index)))
+        .then(res => {
+            return normalizeResponseErrors(res)})
+        .then(res => {
+          console.log(res)
+          return res.json()
+        })
+        .then(data => {
+            console.log(data);
+            console.log(index)
+            const task = {};
+            task[date]=[data];
+            dispatch(addTaskSuccess(task, index, date))})
         .catch(err => {
+            console.error(err)
             dispatch(tasksError(err));
         });
 }
 
 export const DELETE_TASK_SUCCESS = 'DELETE_TASK_SUCCESS';
-export const deleteTaskSuccess = (index, key) => ({
+export const deleteTaskSuccess = (id, date) => ({
 	type: DELETE_TASK_SUCCESS,
-	index,
-	key
+	id,
+    date
 })
 
 
-export const deleteTask = (dispatch, getState, index, key) => {
+export const deleteTask = (id, date) => (dispatch, getState) => {
+    console.log(date)
 	const authToken = getState().auth.authToken;
-       return fetch(`${API_BASE_URL}/tasks/${key}`, {
+       return fetch(`${API_BASE_URL}/tasks/${id}`, {
         method: 'DELETE',
         headers: {
             // Provide our auth token as credentials
-            Authorization: `Bearer ${authToken}`
+            Authorization: `Bearer ${authToken}`,
+            "Content-Type": "application/json"
         }
     })
-        .then(res => normalizeResponseErrors(res))
-        .then(res => res.json())
-        .then(() => dispatch(deleteTaskSuccess(index, key)))
+        .then(res => {
+            if(!res.ok) {
+                return normalizeResponseErrors(res);
+            }
+        return dispatch(deleteTaskSuccess(id, date))
+         })
         .catch(err => {
             dispatch(tasksError(err));
         });
