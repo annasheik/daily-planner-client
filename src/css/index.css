@@ -9,6 +9,11 @@ body {
   color: #444;
   text-align: center;
 }
+button, [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+    border: none;
+    background: none;
+    }
 /*NAVIGATION*/
 nav,
 footer {
@@ -201,6 +206,10 @@ div.entries {
 }
 ul.new-task {
   margin-left: -30px;
+}
+.no-tasks {
+  font-style: italic;
+  font-size: 19px;
 }
 .checkbox label {
   display: inline-block;
@@ -437,3 +446,77 @@ footer a{
 footer a:hover {
   text-decoration: underline;
 }
+/* BIG SCREENS*/
+@media only screen and (min-width: 800px)  {
+  /*Landing page*/
+  .logo {
+    font-size: 39px;
+  }
+  nav {
+    height: 89px;
+  }
+  ul.nav-links {
+    margin-right: 30px;
+    margin-top: 7px;
+    font-size: 26px;
+  }
+  #menuToggle {
+    top: 34px;
+    left: 16px;
+  }
+  .hero {
+    background-size: 171vh;
+  }
+  img.icon {
+    width: 67px;
+  }
+  .banner-text {
+    width: 74%;
+    height: 146px;
+  }
+h1 {
+      font-size: 2em;
+      margin: 1em 0;
+      padding-top: 10px;
+}
+
+/* Dashboard*/
+
+div.dashboard {
+    margin-top: 144px;
+}
+.quote {
+  margin-bottom: 63px;
+}
+ul.new-task {
+    margin-left: 28px;
+}
+ul.checkbox {
+  width: 500px;
+}
+.checkbox label {
+  font-size: 13px;
+}
+
+section.add-task-section {
+    width: 500px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+}
+
+@media only screen and (min-width: 600px)  {
+ div.dashboard {
+    margin-top: 144px;
+}
+.quote {
+  margin-bottom: 63px;
+}
+ul.new-task {
+    margin-left: -5px;
+}
+
+
+
+  }

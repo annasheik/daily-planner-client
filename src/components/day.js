@@ -34,7 +34,7 @@ export class Day extends React.Component {
 			
 				{Object.keys(this.props.tasks || {}).length > 0 ?
 			<Checkbox index={this.props.index}
-			tasks={this.props.tasks} /> : <p>No tasks yet</p> }
+			tasks={this.props.tasks} /> : <p className="no-tasks">No tasks yet</p> }
 		    
 			
 		</div>

@@ -329,3 +329,22 @@ ul#menu {
     margin-right: 29px;
 }
 
+/* BIG SCREENS*/
+@media only screen and (min-width: 800px)  {
+  /*Landing page*/
+  .logo {
+    font-size: 39px;
+  }
+  nav {
+    height: 89px;
+  }
+  ul.nav-links {
+    margin-right: 30px;
+    margin-top: -4px;
+    font-size: 26px;
+  }
+
+
+}
+
+
