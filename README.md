@@ -11,16 +11,16 @@ completed ones.
 
 ## Screenshots
 
-Landing page:
+## Landing page:
 ![login screen](screenshots/screenshot1.png)
 
-Login Page:
+## Login Page:
 ![login page](screenshots/screenshot2.png)
 
-User Dashboard:
+## User Dashboard:
 ![user dashboard](screenshots/screenshot3.png)
 
-Mobile Application/ Fully responsive
+## Mobile Application/ Fully responsive
 <img src="screenshots/screenshot4.png" width="300">
 
 ## Built With
