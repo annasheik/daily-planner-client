@@ -9,6 +9,12 @@ body {
   color: #444;
   text-align: center;
 }
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 button, [type="button"], [type="reset"], [type="submit"] {
     -webkit-appearance: button;
     border: none;
@@ -436,7 +442,14 @@ div.productivity-page {
 /*FOOTER*/
 footer {
   background-color: #dadada;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 69px;
+  width: 100%;
+  overflow: hidden;
 }
+
 footer p {
   font-size: 16px;
 }
