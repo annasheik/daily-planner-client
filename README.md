@@ -11,13 +11,37 @@ completed ones.
 
 ## Screenshots
 
-Landing page:
-![login screen](screenshots/1.png)
+## Landing page:
+![login screen](screenshots/screenshot1.png)
 
-Login Page:
-![login page](screenshots/3.png)
+## Login Page:
+![login page](screenshots/screenshot2.png)
 
-User Dashboard:
-![user dashboard](screenshots/5.png)
+## User Dashboard:
+![user dashboard](screenshots/screenshot3.png)
 
-![entry](screenshots/6.png)
+## Mobile Application/ Fully responsive
+<img src="screenshots/screenshot4.png" width="300">
+
+## Built With
+## Front End 
+
+- HTML5
+- CSS
+- jQuery
+- JavaScript
+- React / Redux
+- Enzyme
+## Back end
+
+- Node.js
+- Express.js
+- Mocha
+- Chai
+- Mongo
+- Mongoose
+- mLab
+- bcrypt.js
+- Passport
+- TravisCI
+- Heroku
